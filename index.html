@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Proxy</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Processor</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Link Proxy</h1>
-    <input type="text" id="linkInput" placeholder="Enter a Link..." />
-    <button id="openLink">Open Link</button>
-    <iframe id="resultFrame" sandbox="allow-scripts allow-same-origin"></iframe>
+    <div class="container">
+        <h1>Link Processor</h1>
+        <input type="text" id="linkInput" placeholder="Paste a link..." />
+        <button id="openLink">Open Link</button>
+        <button id="settingsButton">⚙️ Settings</button>
+    </div>
+
+    <!-- SETTINGS MODAL -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span id="closeSettings" class="close">&times;</span>
+            <h2>Settings</h2>
+            <label>
+                <input type="checkbox" id="enableAboutBlank" />
+                Enable about:blank
+            </label>
+            <input type="text" id="backgroundImage" placeholder="Background Image URL" />
+            <input type="text" id="panicMatrix" placeholder="Panic Matrix (e.g., Ctrl+Alt+Z)" />
+            <input type="text" id="panicRedirect" placeholder="Panic Redirect URL" />
+            <button id="saveSettings">Save Settings</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
